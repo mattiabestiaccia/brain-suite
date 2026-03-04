@@ -112,13 +112,47 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (populated during roadmap creation) | | |
+| CORE-01 | Phase 2: New Session Flow | Pending |
+| CORE-02 | Phase 3: Dimension Exploration | Pending |
+| CORE-03 | Phase 3: Dimension Exploration | Pending |
+| CORE-04 | Phase 3: Dimension Exploration | Pending |
+| CORE-05 | Phase 3: Dimension Exploration | Pending |
+| CORE-06 | Phase 3: Dimension Exploration | Pending |
+| CORE-07 | Phase 2: New Session Flow | Pending |
+| DIM-01 | Phase 3: Dimension Exploration | Pending |
+| DIM-02 | Phase 3: Dimension Exploration | Pending |
+| DIM-03 | Phase 3: Dimension Exploration | Pending |
+| DIM-04 | Phase 4: Session Management | Pending |
+| DIM-05 | Phase 4: Session Management | Pending |
+| ART-01 | Phase 3: Dimension Exploration | Pending |
+| ART-02 | Phase 3: Dimension Exploration | Pending |
+| ART-03 | Phase 4: Session Management | Pending |
+| SESS-01 | Phase 2: New Session Flow | Pending |
+| SESS-02 | Phase 4: Session Management | Pending |
+| SESS-03 | Phase 4: Session Management | Pending |
+| RES-01 | Phase 5: Research Integration | Pending |
+| RES-02 | Phase 5: Research Integration | Pending |
+| RES-03 | Phase 5: Research Integration | Pending |
+| RES-04 | Phase 5: Research Integration | Pending |
+| SYNTH-01 | Phase 6: Synthesis & Handoff | Pending |
+| SYNTH-02 | Phase 6: Synthesis & Handoff | Pending |
+| SYNTH-03 | Phase 6: Synthesis & Handoff | Pending |
+| SYNTH-04 | Phase 6: Synthesis & Handoff | Pending |
+| SYNTH-05 | Phase 6: Synthesis & Handoff | Pending |
+| AGT-01 | Phase 2: New Session Flow | Pending |
+| AGT-02 | Phase 5: Research Integration | Pending |
+| AGT-03 | Phase 6: Synthesis & Handoff | Pending |
+| INFRA-01 | Phase 1: Infrastructure & Foundations | Pending |
+| INFRA-02 | Phase 1: Infrastructure & Foundations | Pending |
+| INFRA-03 | Phase 1: Infrastructure & Foundations | Pending |
+| INFRA-04 | Phase 1: Infrastructure & Foundations | Pending |
+| INFRA-05 | Phase 1: Infrastructure & Foundations | Pending |
 
 **Coverage:**
-- v1 requirements: 28 total
-- Mapped to phases: 0
-- Unmapped: 28 ⚠️
+- v1 requirements: 35 total
+- Mapped to phases: 35
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-04*
-*Last updated: 2026-03-04 after initial definition*
+*Last updated: 2026-03-04 after roadmap creation*
