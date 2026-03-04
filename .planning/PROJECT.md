@@ -77,6 +77,7 @@ L'utente può esplorare un'idea di prodotto in modo strutturato e interattivo, d
 - **Distribuzione**: Symlink da `~/.claude/` al repo — nessun file copiato, modifiche riflesse immediatamente
 - **Coesistenza**: `~/.claude/agents/` contiene anche agenti di altri tool (GSD) — symlink singoli file, non directory
 - **Indipendenza**: Brain Suite funziona senza GSD installato. Il bridge è opzionale
+- **TDD**: Ogni componente software (Python toolkit, MCP server, CLI) deve seguire Test-Driven Development. Non si applica ai file markdown/prompt del v1
 
 ## Key Decisions
 
