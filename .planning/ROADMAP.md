@@ -12,7 +12,7 @@ Brain Suite delivers a structured brainstorming framework for Claude Code in 6 p
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Infrastructure & Foundations** - Install scripts, repo structure, reference files, base templates
+- [x] **Phase 1: Infrastructure & Foundations** - Install scripts, repo structure, reference files, base templates
 - [ ] **Phase 2: New Session Flow** - `/brain:new` end-to-end with interactive Socratic questioning
 - [ ] **Phase 3: Dimension Exploration** - `/brain:explore` across 6 dimensions with structured artifact output
 - [ ] **Phase 4: Session Management** - Resume, status, re-exploration, custom dimensions
@@ -34,8 +34,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Repo structure, reference files, dimension templates, agent stubs
-- [ ] 01-02-PLAN.md — Install/uninstall scripts and README documentation
+- [x] 01-01-PLAN.md -- Repo structure, reference files, dimension templates, agent stubs
+- [x] 01-02-PLAN.md -- Install/uninstall scripts and README documentation
 
 ### Phase 2: New Session Flow
 **Goal**: User can start a brainstorming session from scratch and produce structured artifacts through interactive dialogue
@@ -122,7 +122,7 @@ Note: Phases 5 and 6 both depend on Phase 3 (not on each other).
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Infrastructure & Foundations | 0/2 | Not started | - |
+| 1. Infrastructure & Foundations | 2/2 | Complete | 2026-03-04 |
 | 2. New Session Flow | 0/2 | Not started | - |
 | 3. Dimension Exploration | 0/3 | Not started | - |
 | 4. Session Management | 0/2 | Not started | - |

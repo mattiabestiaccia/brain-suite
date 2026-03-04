@@ -61,10 +61,10 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Infrastructure
 
 - [x] **INFRA-01**: `install.sh` creates symlinks from `~/.claude/` to repo files (commands, agents, brainstorm framework)
-- [ ] **INFRA-02**: `uninstall.sh` removes symlinks without touching repo or other `~/.claude/` files
+- [x] **INFRA-02**: `uninstall.sh` removes symlinks without touching repo or other `~/.claude/` files
 - [x] **INFRA-03**: Install handles coexistence with GSD (symlink individual agent files, not agents directory)
-- [ ] **INFRA-04**: Install is idempotent (running twice produces same result)
-- [ ] **INFRA-05**: README.md with installation instructions, usage guide, and command reference
+- [x] **INFRA-04**: Install is idempotent (running twice produces same result)
+- [x] **INFRA-05**: README.md with installation instructions, usage guide, and command reference
 
 ## v2 Requirements
 
@@ -143,10 +143,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AGT-02 | Phase 5: Research Integration | Pending |
 | AGT-03 | Phase 6: Synthesis & Handoff | Pending |
 | INFRA-01 | Phase 1: Infrastructure & Foundations | Complete |
-| INFRA-02 | Phase 1: Infrastructure & Foundations | Pending |
+| INFRA-02 | Phase 1: Infrastructure & Foundations | Complete |
 | INFRA-03 | Phase 1: Infrastructure & Foundations | Complete |
-| INFRA-04 | Phase 1: Infrastructure & Foundations | Pending |
-| INFRA-05 | Phase 1: Infrastructure & Foundations | Pending |
+| INFRA-04 | Phase 1: Infrastructure & Foundations | Complete |
+| INFRA-05 | Phase 1: Infrastructure & Foundations | Complete |
 
 **Coverage:**
 - v1 requirements: 35 total
