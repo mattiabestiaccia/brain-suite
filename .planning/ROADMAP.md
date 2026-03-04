@@ -31,11 +31,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Running `./install.sh` twice produces the same result (idempotent)
   4. Reference files exist: `voice-interaction.md`, `questioning.md`, `frameworks.md`, `dimensions-guide.md`
   5. README.md documents installation, usage, and command reference
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md — Repo structure, reference files, dimension templates, agent stubs
+- [ ] 01-02-PLAN.md — Install/uninstall scripts and README documentation
 
 ### Phase 2: New Session Flow
 **Goal**: User can start a brainstorming session from scratch and produce structured artifacts through interactive dialogue
