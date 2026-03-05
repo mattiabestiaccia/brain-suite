@@ -54,7 +54,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Agents
 
-- [ ] **AGT-01**: brain-explorer agent guides interactive Socratic exploration with voice-first patterns and assumption challenging
+- [x] **AGT-01**: brain-explorer agent guides interactive Socratic exploration with voice-first patterns and assumption challenging
 - [ ] **AGT-02**: brain-researcher agent fetches factual data via web search (Exa MCP) when spawned by explorer
 - [ ] **AGT-03**: brain-synthesizer agent reads explored dimensions, identifies cross-dimensional patterns, generates SYNTHESIS.md and HANDOFF.md
 
@@ -139,7 +139,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SYNTH-03 | Phase 6: Synthesis & Handoff | Pending |
 | SYNTH-04 | Phase 6: Synthesis & Handoff | Pending |
 | SYNTH-05 | Phase 6: Synthesis & Handoff | Pending |
-| AGT-01 | Phase 2: New Session Flow | Pending |
+| AGT-01 | Phase 2: New Session Flow | Complete |
 | AGT-02 | Phase 5: Research Integration | Pending |
 | AGT-03 | Phase 6: Synthesis & Handoff | Pending |
 | INFRA-01 | Phase 1: Infrastructure & Foundations | Complete |
