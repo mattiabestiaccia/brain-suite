@@ -46,11 +46,11 @@ Plans:
   2. brain-explorer agent follows voice-first patterns: responses are short and scannable, exactly one question per response, summary before question
   3. SESSION.md tracks session state (explored dimensions list, dates, notes) and persists across Claude Code sessions
   4. Interaction tolerates informal spoken input without confusion or correction
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
+- [ ] 02-01-PLAN.md -- Complete /brain:new command with interactive Socratic brainstorming
+- [ ] 02-02-PLAN.md -- Brain-explorer agent behavioral specification
 
 ### Phase 3: Dimension Exploration
 **Goal**: User can interactively explore any of 6 dimensions, producing structured artifacts, with control over exploration depth, mode, and order
