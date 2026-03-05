@@ -9,13 +9,13 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Core Exploration
 
-- [ ] **CORE-01**: User can start a brainstorming session with `/brain:new` that creates `.brainstorm/` with IDEA.md and SESSION.md through interactive Socratic questioning
+- [x] **CORE-01**: User can start a brainstorming session with `/brain:new` that creates `.brainstorm/` with IDEA.md and SESSION.md through interactive Socratic questioning
 - [ ] **CORE-02**: User can explore any dimension interactively via `/brain:explore <dimension>` with guided Socratic dialogue
 - [ ] **CORE-03**: User can explore dimensions in any order, skip dimensions, and revisit already-explored dimensions (non-linear)
 - [ ] **CORE-04**: Explorer challenges user's assumptions constructively during exploration (assumption challenging mode)
 - [ ] **CORE-05**: Explorer suggests when key points of a dimension are covered, but user decides to continue or stop (hybrid depth gating)
 - [ ] **CORE-06**: User can choose exploration mode (Socratic, devil's advocate, creative/divergent) per dimension
-- [ ] **CORE-07**: All interactions follow voice-first patterns: responses short and scannable, one question at a time, summary before question, tolerance for informal spoken input
+- [x] **CORE-07**: All interactions follow voice-first patterns: responses short and scannable, one question at a time, summary before question, tolerance for informal spoken input
 
 ### Dimensions
 
@@ -33,7 +33,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Session Management
 
-- [ ] **SESS-01**: Session state persists in `.brainstorm/SESSION.md` tracking explored dimensions, dates, and notes
+- [x] **SESS-01**: Session state persists in `.brainstorm/SESSION.md` tracking explored dimensions, dates, and notes
 - [ ] **SESS-02**: User can resume a previous session with `/brain:resume` that loads IDEA.md + SESSION.md + all explored dimensions into context
 - [ ] **SESS-03**: When re-exploring an already-explored dimension, user is asked: deepen existing content or start fresh
 
@@ -112,13 +112,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CORE-01 | Phase 2: New Session Flow | Pending |
+| CORE-01 | Phase 2: New Session Flow | Complete |
 | CORE-02 | Phase 3: Dimension Exploration | Pending |
 | CORE-03 | Phase 3: Dimension Exploration | Pending |
 | CORE-04 | Phase 3: Dimension Exploration | Pending |
 | CORE-05 | Phase 3: Dimension Exploration | Pending |
 | CORE-06 | Phase 3: Dimension Exploration | Pending |
-| CORE-07 | Phase 2: New Session Flow | Pending |
+| CORE-07 | Phase 2: New Session Flow | Complete |
 | DIM-01 | Phase 3: Dimension Exploration | Pending |
 | DIM-02 | Phase 3: Dimension Exploration | Pending |
 | DIM-03 | Phase 3: Dimension Exploration | Pending |
@@ -127,7 +127,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ART-01 | Phase 3: Dimension Exploration | Pending |
 | ART-02 | Phase 3: Dimension Exploration | Pending |
 | ART-03 | Phase 4: Session Management | Pending |
-| SESS-01 | Phase 2: New Session Flow | Pending |
+| SESS-01 | Phase 2: New Session Flow | Complete |
 | SESS-02 | Phase 4: Session Management | Pending |
 | SESS-03 | Phase 4: Session Management | Pending |
 | RES-01 | Phase 5: Research Integration | Pending |

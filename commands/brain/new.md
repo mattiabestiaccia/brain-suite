@@ -48,7 +48,8 @@ Before opening the conversation, check if a brainstorming session already exists
        ```
      - Confirm archival to the user briefly, then proceed with the new session.
    - **If continue:**
-     - Tell the user to use `/brain:resume` instead to pick up where they left off. End the command here.
+     - Tell the user briefly: "Ok, riprendo da dove eravamo rimasti."
+     - Invoke `/brain:resume` automatically using the Skill tool: `skill: "brain:resume"`. This hands off control to the resume command. End this command here — do NOT continue with the new session flow.
 
 3. **If `.brainstorm/IDEA.md` does NOT exist:**
    - Ensure the directory exists: `mkdir -p .brainstorm`

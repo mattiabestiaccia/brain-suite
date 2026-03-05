@@ -49,7 +49,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md -- Complete /brain:new command with interactive Socratic brainstorming
+- [x] 02-01-PLAN.md -- Complete /brain:new command with interactive Socratic brainstorming
 - [ ] 02-02-PLAN.md -- Brain-explorer agent behavioral specification
 
 ### Phase 3: Dimension Exploration
@@ -123,7 +123,7 @@ Note: Phases 5 and 6 both depend on Phase 3 (not on each other).
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Infrastructure & Foundations | 2/2 | Complete | 2026-03-04 |
-| 2. New Session Flow | 0/2 | Not started | - |
+| 2. New Session Flow | 1/2 | In progress | - |
 | 3. Dimension Exploration | 0/3 | Not started | - |
 | 4. Session Management | 0/2 | Not started | - |
 | 5. Research Integration | 0/1 | Not started | - |
