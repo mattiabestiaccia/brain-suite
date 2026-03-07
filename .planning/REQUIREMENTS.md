@@ -10,25 +10,25 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Core Exploration
 
 - [x] **CORE-01**: User can start a brainstorming session with `/brain:new` that creates `.brainstorm/` with IDEA.md and SESSION.md through interactive Socratic questioning
-- [ ] **CORE-02**: User can explore any dimension interactively via `/brain:explore <dimension>` with guided Socratic dialogue
-- [ ] **CORE-03**: User can explore dimensions in any order, skip dimensions, and revisit already-explored dimensions (non-linear)
-- [ ] **CORE-04**: Explorer challenges user's assumptions constructively during exploration (assumption challenging mode)
-- [ ] **CORE-05**: Explorer suggests when key points of a dimension are covered, but user decides to continue or stop (hybrid depth gating)
-- [ ] **CORE-06**: User can choose exploration mode (Socratic, devil's advocate, creative/divergent) per dimension
+- [x] **CORE-02**: User can explore any dimension interactively via `/brain:explore <dimension>` with guided Socratic dialogue
+- [x] **CORE-03**: User can explore dimensions in any order, skip dimensions, and revisit already-explored dimensions (non-linear)
+- [x] **CORE-04**: Explorer challenges user's assumptions constructively during exploration (assumption challenging mode)
+- [x] **CORE-05**: Explorer suggests when key points of a dimension are covered, but user decides to continue or stop (hybrid depth gating)
+- [x] **CORE-06**: User can choose exploration mode (Socratic, devil's advocate, creative/divergent) per dimension
 - [x] **CORE-07**: All interactions follow voice-first patterns: responses short and scannable, one question at a time, summary before question, tolerance for informal spoken input
 
 ### Dimensions
 
-- [ ] **DIM-01**: 6 built-in dimensions available: product, tech, market, business, competitors, users
-- [ ] **DIM-02**: Each dimension has a dedicated template that defines structured output sections
+- [x] **DIM-01**: 6 built-in dimensions available: product, tech, market, business, competitors, users
+- [x] **DIM-02**: Each dimension has a dedicated template that defines structured output sections
 - [ ] **DIM-03**: User can launch dimension shortcuts (`/brain:product`, `/brain:tech`, `/brain:market`, `/brain:business`, `/brain:competitors`, `/brain:users`)
 - [ ] **DIM-04**: User can add custom dimensions via `/brain:add-dimension` with template creation and SESSION.md registration
 - [ ] **DIM-05**: Explorer suggests which dimension to explore next based on what was discussed and gaps identified (proactive next-step)
 
 ### Artifacts & Output
 
-- [ ] **ART-01**: Each dimension exploration produces a structured markdown file in `.brainstorm/dimensions/<dimension>.md`
-- [ ] **ART-02**: Each exploration session produces a cleaned session log in `.brainstorm/sessions/<dimension>-<date>.md` (conversational noise removed, content intact)
+- [x] **ART-01**: Each dimension exploration produces a structured markdown file in `.brainstorm/dimensions/<dimension>.md`
+- [x] **ART-02**: Each exploration session produces a cleaned session log in `.brainstorm/sessions/<dimension>-<date>.md` (conversational noise removed, content intact)
 - [ ] **ART-03**: `/brain:status` shows overview of session: which dimensions explored, which remain, dates, overall progress
 
 ### Session Management
@@ -113,19 +113,19 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | CORE-01 | Phase 2: New Session Flow | Complete |
-| CORE-02 | Phase 3: Dimension Exploration | Pending |
-| CORE-03 | Phase 3: Dimension Exploration | Pending |
-| CORE-04 | Phase 3: Dimension Exploration | Pending |
-| CORE-05 | Phase 3: Dimension Exploration | Pending |
-| CORE-06 | Phase 3: Dimension Exploration | Pending |
+| CORE-02 | Phase 3: Dimension Exploration | Complete |
+| CORE-03 | Phase 3: Dimension Exploration | Complete |
+| CORE-04 | Phase 3: Dimension Exploration | Complete |
+| CORE-05 | Phase 3: Dimension Exploration | Complete |
+| CORE-06 | Phase 3: Dimension Exploration | Complete |
 | CORE-07 | Phase 2: New Session Flow | Complete |
-| DIM-01 | Phase 3: Dimension Exploration | Pending |
-| DIM-02 | Phase 3: Dimension Exploration | Pending |
+| DIM-01 | Phase 3: Dimension Exploration | Complete |
+| DIM-02 | Phase 3: Dimension Exploration | Complete |
 | DIM-03 | Phase 3: Dimension Exploration | Pending |
 | DIM-04 | Phase 4: Session Management | Pending |
 | DIM-05 | Phase 4: Session Management | Pending |
-| ART-01 | Phase 3: Dimension Exploration | Pending |
-| ART-02 | Phase 3: Dimension Exploration | Pending |
+| ART-01 | Phase 3: Dimension Exploration | Complete |
+| ART-02 | Phase 3: Dimension Exploration | Complete |
 | ART-03 | Phase 4: Session Management | Pending |
 | SESS-01 | Phase 2: New Session Flow | Complete |
 | SESS-02 | Phase 4: Session Management | Pending |

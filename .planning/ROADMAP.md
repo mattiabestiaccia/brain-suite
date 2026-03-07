@@ -13,7 +13,7 @@ Brain Suite delivers a structured brainstorming framework for Claude Code in 6 p
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Infrastructure & Foundations** - Install scripts, repo structure, reference files, base templates
-- [ ] **Phase 2: New Session Flow** - `/brain:new` end-to-end with interactive Socratic questioning
+- [x] **Phase 2: New Session Flow** - `/brain:new` end-to-end with interactive Socratic questioning
 - [ ] **Phase 3: Dimension Exploration** - `/brain:explore` across 6 dimensions with structured artifact output
 - [ ] **Phase 4: Session Management** - Resume, status, re-exploration, custom dimensions
 - [ ] **Phase 5: Research Integration** - brain-researcher agent with Exa MCP for factual data
@@ -50,7 +50,7 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md -- Complete /brain:new command with interactive Socratic brainstorming
-- [ ] 02-02-PLAN.md -- Brain-explorer agent behavioral specification
+- [x] 02-02-PLAN.md -- Brain-explorer agent behavioral specification
 
 ### Phase 3: Dimension Exploration
 **Goal**: User can interactively explore any of 6 dimensions, producing structured artifacts, with control over exploration depth, mode, and order
@@ -65,7 +65,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md -- Complete /brain:explore command with interactive dimension exploration
+- [x] 03-01-PLAN.md -- Complete /brain:explore command with interactive dimension exploration
 - [ ] 03-02-PLAN.md -- 6 shortcut commands delegating to explore behavior
 
 ### Phase 4: Session Management
@@ -122,8 +122,8 @@ Note: Phases 5 and 6 both depend on Phase 3 (not on each other).
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Infrastructure & Foundations | 2/2 | Complete | 2026-03-04 |
-| 2. New Session Flow | 1/2 | In progress | - |
-| 3. Dimension Exploration | 0/2 | Not started | - |
+| 2. New Session Flow | 2/2 | Complete | 2026-03-05 |
+| 3. Dimension Exploration | 1/2 | In progress | - |
 | 4. Session Management | 0/2 | Not started | - |
 | 5. Research Integration | 0/1 | Not started | - |
 | 6. Synthesis & Handoff | 0/2 | Not started | - |
