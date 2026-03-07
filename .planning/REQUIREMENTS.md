@@ -21,7 +21,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **DIM-01**: 6 built-in dimensions available: product, tech, market, business, competitors, users
 - [x] **DIM-02**: Each dimension has a dedicated template that defines structured output sections
-- [ ] **DIM-03**: User can launch dimension shortcuts (`/brain:product`, `/brain:tech`, `/brain:market`, `/brain:business`, `/brain:competitors`, `/brain:users`)
+- [x] **DIM-03**: User can launch dimension shortcuts (`/brain:product`, `/brain:tech`, `/brain:market`, `/brain:business`, `/brain:competitors`, `/brain:users`)
 - [ ] **DIM-04**: User can add custom dimensions via `/brain:add-dimension` with template creation and SESSION.md registration
 - [ ] **DIM-05**: Explorer suggests which dimension to explore next based on what was discussed and gaps identified (proactive next-step)
 
@@ -121,7 +121,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CORE-07 | Phase 2: New Session Flow | Complete |
 | DIM-01 | Phase 3: Dimension Exploration | Complete |
 | DIM-02 | Phase 3: Dimension Exploration | Complete |
-| DIM-03 | Phase 3: Dimension Exploration | Pending |
+| DIM-03 | Phase 3: Dimension Exploration | Complete |
 | DIM-04 | Phase 4: Session Management | Pending |
 | DIM-05 | Phase 4: Session Management | Pending |
 | ART-01 | Phase 3: Dimension Exploration | Complete |
