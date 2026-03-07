@@ -78,11 +78,12 @@ Plans:
   3. When re-exploring an already-explored dimension, user is asked whether to deepen existing content or start fresh
   4. User can add a custom dimension via `/brain:add-dimension` with automatic template creation and SESSION.md registration
   5. Explorer proactively suggests which dimension to explore next based on gaps and what was already discussed
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
+- [ ] 04-01-PLAN.md -- Status dashboard and custom dimension creation commands
+- [ ] 04-02-PLAN.md -- Re-exploration flow, custom dimension support, and enhanced suggestions in explore.md
+- [ ] 04-03-PLAN.md -- Resume intelligent hub command with full session context loading
 
 ### Phase 5: Research Integration
 **Goal**: User can get factual data (market data, competitor info, tech feasibility) injected into exploration when the explorer identifies a need
@@ -124,6 +125,6 @@ Note: Phases 5 and 6 both depend on Phase 3 (not on each other).
 | 1. Infrastructure & Foundations | 2/2 | Complete | 2026-03-04 |
 | 2. New Session Flow | 2/2 | Complete | 2026-03-05 |
 | 3. Dimension Exploration | 2/2 | Complete | 2026-03-07 |
-| 4. Session Management | 0/2 | Not started | - |
+| 4. Session Management | 0/3 | Not started | - |
 | 5. Research Integration | 0/1 | Not started | - |
 | 6. Synthesis & Handoff | 0/2 | Not started | - |
