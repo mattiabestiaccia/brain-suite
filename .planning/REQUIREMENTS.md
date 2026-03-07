@@ -22,20 +22,20 @@ Requirements for initial release. Each maps to roadmap phases.
 - [x] **DIM-01**: 6 built-in dimensions available: product, tech, market, business, competitors, users
 - [x] **DIM-02**: Each dimension has a dedicated template that defines structured output sections
 - [x] **DIM-03**: User can launch dimension shortcuts (`/brain:product`, `/brain:tech`, `/brain:market`, `/brain:business`, `/brain:competitors`, `/brain:users`)
-- [ ] **DIM-04**: User can add custom dimensions via `/brain:add-dimension` with template creation and SESSION.md registration
-- [ ] **DIM-05**: Explorer suggests which dimension to explore next based on what was discussed and gaps identified (proactive next-step)
+- [x] **DIM-04**: User can add custom dimensions via `/brain:add-dimension` with template creation and SESSION.md registration
+- [x] **DIM-05**: Explorer suggests which dimension to explore next based on what was discussed and gaps identified (proactive next-step)
 
 ### Artifacts & Output
 
 - [x] **ART-01**: Each dimension exploration produces a structured markdown file in `.brainstorm/dimensions/<dimension>.md`
 - [x] **ART-02**: Each exploration session produces a cleaned session log in `.brainstorm/sessions/<dimension>-<date>.md` (conversational noise removed, content intact)
-- [ ] **ART-03**: `/brain:status` shows overview of session: which dimensions explored, which remain, dates, overall progress
+- [x] **ART-03**: `/brain:status` shows overview of session: which dimensions explored, which remain, dates, overall progress
 
 ### Session Management
 
 - [x] **SESS-01**: Session state persists in `.brainstorm/SESSION.md` tracking explored dimensions, dates, and notes
-- [ ] **SESS-02**: User can resume a previous session with `/brain:resume` that loads IDEA.md + SESSION.md + all explored dimensions into context
-- [ ] **SESS-03**: When re-exploring an already-explored dimension, user is asked: deepen existing content or start fresh
+- [x] **SESS-02**: User can resume a previous session with `/brain:resume` that loads IDEA.md + SESSION.md + all explored dimensions into context
+- [x] **SESS-03**: When re-exploring an already-explored dimension, user is asked: deepen existing content or start fresh
 
 ### Research
 
@@ -122,14 +122,14 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DIM-01 | Phase 3: Dimension Exploration | Complete |
 | DIM-02 | Phase 3: Dimension Exploration | Complete |
 | DIM-03 | Phase 3: Dimension Exploration | Complete |
-| DIM-04 | Phase 4: Session Management | Pending |
-| DIM-05 | Phase 4: Session Management | Pending |
+| DIM-04 | Phase 4: Session Management | Complete |
+| DIM-05 | Phase 4: Session Management | Complete |
 | ART-01 | Phase 3: Dimension Exploration | Complete |
 | ART-02 | Phase 3: Dimension Exploration | Complete |
-| ART-03 | Phase 4: Session Management | Pending |
+| ART-03 | Phase 4: Session Management | Complete |
 | SESS-01 | Phase 2: New Session Flow | Complete |
-| SESS-02 | Phase 4: Session Management | Pending |
-| SESS-03 | Phase 4: Session Management | Pending |
+| SESS-02 | Phase 4: Session Management | Complete |
+| SESS-03 | Phase 4: Session Management | Complete |
 | RES-01 | Phase 5: Research Integration | Pending |
 | RES-02 | Phase 5: Research Integration | Pending |
 | RES-03 | Phase 5: Research Integration | Pending |

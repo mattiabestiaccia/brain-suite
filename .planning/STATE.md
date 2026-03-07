@@ -2,13 +2,13 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: unknown
-last_updated: "2026-03-07T09:07:00Z"
+status: in_progress
+last_updated: "2026-03-07T18:08:24.775Z"
 progress:
-  total_phases: 3
-  completed_phases: 3
-  total_plans: 6
-  completed_plans: 6
+  total_phases: 4
+  completed_phases: 4
+  total_plans: 9
+  completed_plans: 9
 ---
 
 # Project State
@@ -18,23 +18,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-04)
 
 **Core value:** L'utente puo esplorare un'idea di prodotto in modo strutturato e interattivo, dimensione per dimensione, con artefatti persistenti e output azionabile per l'implementazione.
-**Current focus:** Phase 3 - Dimension Exploration (Complete)
+**Current focus:** Phase 4 - Session Management (Complete)
 
 ## Current Position
 
-Phase: 3 of 6 (Dimension Exploration)
-Plan: 2 of 2 completed in current phase (2 complete)
+Phase: 4 of 6 (Session Management)
+Plan: 3 of 3 completed in current phase (3 complete)
 Status: Phase Complete
-Last activity: 2026-03-07 -- Completed 03-02-PLAN.md (Shortcut Commands)
+Last activity: 2026-03-07 -- Completed 04-03-PLAN.md (resume intelligent hub)
 
-Progress: [██████████] 100% (Phase 3)
+Progress: [██████████] 100% (Phase 4)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 6
-- Average duration: 5.2min
-- Total execution time: 0.52 hours
+- Total plans completed: 9
+- Average duration: 4.9min
+- Total execution time: 0.73 hours
 
 **By Phase:**
 
@@ -43,9 +43,10 @@ Progress: [██████████] 100% (Phase 3)
 | 01-infrastructure-foundations | 2 | 9min | 4.5min |
 | 02-new-session-flow | 2 | 14min | 7min |
 | 03-dimension-exploration | 2/2 | 8min | 4min |
+| 04-session-management | 3/3 | 14min | 4.7min |
 
 **Recent Trend:**
-- Last 5 plans: 3min, 8min, 6min, 5min, 3min
+- Last 5 plans: 5min, 3min, 5min, 4min, 5min
 - Trend: stable
 
 *Updated after each plan completion*
@@ -54,6 +55,9 @@ Progress: [██████████] 100% (Phase 3)
 | Phase 02 P02 | 6min | 1 task | 1 file |
 | Phase 03 P01 | 5min | 2 tasks | 1 file |
 | Phase 03 P02 | 3min | 2 tasks | 6 files |
+| Phase 04 P01 | 5min | 2 tasks | 2 files |
+| Phase 04 P02 | 4min | 1 task | 1 file |
+| Phase 04 P03 | 5min | 2 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -85,6 +89,14 @@ Recent decisions affecting current work:
 - 03-01: Session log stays faithful to original conversation -- corrections apply only to dimension document
 - 03-01: Undiscussed template sections get placeholder questions as spunti, not empty markers
 - 03-02: All 6 shortcuts follow identical structure (18 lines each) -- only dimension name differs
+- 04-01: Status shows enriched dashboard with emoji indicators, ASCII progress bar, conditional next-dimension suggestion
+- 04-01: Add-dimension uses iconv with tr fallback for slug generation, freeform templates in .brainstorm/templates/
+- 04-02: Explore.md two-step validation accepts custom dimensions registered in SESSION.md
+- 04-02: Re-exploration deepen/restart flow replaces Phase 4 placeholder in explore.md
+- 04-02: Enhanced next-dimension suggestion prioritizes conversation signals > dimension relationships > gaps
+- 04-03: Resume uses narrative prose (not tabular) to differentiate from /brain:status dashboard
+- 04-03: Intelligent hub handles status, review, explore internally -- only /brain:add-dimension redirects
+- 04-03: Explore delegation reuses exact same Read-tool pattern as shortcut commands
 
 ### Pending Todos
 
@@ -100,5 +112,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-07
-Stopped at: Completed 03-02-PLAN.md (Shortcut Commands) -- Phase 3 complete
-Resume file: .planning/phases/03-dimension-exploration/03-02-SUMMARY.md
+Stopped at: Completed 04-03-PLAN.md -- Phase 4 complete (all 3 plans done)
+Resume file: .planning/phases/04-session-management/04-03-SUMMARY.md

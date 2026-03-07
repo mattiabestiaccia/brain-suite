@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Infrastructure & Foundations** - Install scripts, repo structure, reference files, base templates
 - [x] **Phase 2: New Session Flow** - `/brain:new` end-to-end with interactive Socratic questioning
 - [x] **Phase 3: Dimension Exploration** - `/brain:explore` across 6 dimensions with structured artifact output
-- [ ] **Phase 4: Session Management** - Resume, status, re-exploration, custom dimensions
+- [x] **Phase 4: Session Management** - Resume, status, re-exploration, custom dimensions
 - [ ] **Phase 5: Research Integration** - brain-researcher agent with Exa MCP for factual data
 - [ ] **Phase 6: Synthesis & Handoff** - Cross-dimensional synthesis and GSD-ready handoff document
 
@@ -81,9 +81,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md -- Status dashboard and custom dimension creation commands
-- [ ] 04-02-PLAN.md -- Re-exploration flow, custom dimension support, and enhanced suggestions in explore.md
-- [ ] 04-03-PLAN.md -- Resume intelligent hub command with full session context loading
+- [x] 04-01-PLAN.md -- Status dashboard and custom dimension creation commands
+- [x] 04-02-PLAN.md -- Re-exploration flow, custom dimension support, and enhanced suggestions in explore.md
+- [x] 04-03-PLAN.md -- Resume intelligent hub command with full session context loading
 
 ### Phase 5: Research Integration
 **Goal**: User can get factual data (market data, competitor info, tech feasibility) injected into exploration when the explorer identifies a need
@@ -125,6 +125,6 @@ Note: Phases 5 and 6 both depend on Phase 3 (not on each other).
 | 1. Infrastructure & Foundations | 2/2 | Complete | 2026-03-04 |
 | 2. New Session Flow | 2/2 | Complete | 2026-03-05 |
 | 3. Dimension Exploration | 2/2 | Complete | 2026-03-07 |
-| 4. Session Management | 0/3 | Not started | - |
+| 4. Session Management | 3/3 | Complete | 2026-03-07 |
 | 5. Research Integration | 0/1 | Not started | - |
 | 6. Synthesis & Handoff | 0/2 | Not started | - |
