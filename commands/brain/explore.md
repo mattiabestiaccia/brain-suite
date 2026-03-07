@@ -1,6 +1,9 @@
 # /brain:explore
 
-Explore a dimension interactively. Usage: `/brain:explore <dimension>` where dimension is one of: product, tech, market, business, competitors, users.
+Explore a dimension interactively. Usage: `/brain:explore <dimension>`.
+
+Built-in dimensions: product, tech, market, business, competitors, users.
+Custom dimensions registered via `/brain:add-dimension` are also accepted.
 
 Dimension name is captured via `$ARGUMENTS`.
 
@@ -18,14 +21,20 @@ Before starting the conversation, load all required context.
    Use the resolved absolute paths for all subsequent Read calls.
 
 2. **Validate the dimension:**
-   - Extract dimension from `$ARGUMENTS` (first word, lowercase).
-   - Valid dimensions: product, tech, market, business, competitors, users.
-   - If the dimension is invalid, empty, or missing: list the 6 valid dimensions and STOP. Do not proceed.
+   - Extract dimension from `$ARGUMENTS` (first word or full argument, lowercase).
+   - Built-in dimensions: product, tech, market, business, competitors, users.
+   - If the dimension matches a built-in: set `IS_CUSTOM = false`. In Step 3, load template from `$BRAIN_TPL/<dimension>.md`.
+   - If NOT built-in: read `.brainstorm/SESSION.md` and check the Explored Dimensions table for a row with a matching dimension slug.
+     - If found in SESSION.md: this is a registered custom dimension. Set `IS_CUSTOM = true`. In Step 3, load template from `.brainstorm/templates/<slug>.md` instead of `$BRAIN_TPL/`.
+     - If NOT found in either: list ALL available dimensions (the 6 built-ins + any custom dimensions from SESSION.md) and STOP.
+   - Track `IS_CUSTOM` internally -- it affects template loading path in Step 3 and mode defaults in the Opening.
 
 3. **Load context files (all via Read tool with resolved paths):**
    - Read `.brainstorm/IDEA.md` -- REQUIRED. If it does not exist, tell the user: "Non c'e ancora un'idea. Lancia `/brain:new` per iniziare." and STOP.
    - Read `.brainstorm/SESSION.md` -- REQUIRED. If missing, tell user to run `/brain:new` first and STOP.
-   - Read `$BRAIN_TPL/<dimension>.md` -- the target dimension template. This defines the sections you will track during conversation.
+   - Load the target dimension template (defines the sections to track during conversation):
+     - If `IS_CUSTOM = false` (built-in): Read `$BRAIN_TPL/<dimension>.md`.
+     - If `IS_CUSTOM = true` (custom): Read `.brainstorm/templates/<slug>.md`. If the custom template file is missing, tell the user: "Il template per [dimension] non esiste. Prova a rilanciare `/brain:add-dimension`." and STOP.
    - Read `$BRAIN_REF/questioning.md` -- for questioning mode behavior and per-dimension defaults.
 
 4. **Load cross-dimensional context:**
@@ -38,7 +47,25 @@ Before starting the conversation, load all required context.
    ```
 
 6. **Check for previous exploration:**
-   - If `.brainstorm/dimensions/<dimension>.md` already exists: note it briefly to the user. "Hai gia esplorato [dimension]. Questa sessione sostituira l'esplorazione precedente." Then proceed normally. (Phase 4 adds the "approfondire o ricominciare" flow.)
+   - If `.brainstorm/dimensions/<dimension>.md` already exists:
+     - Ask the user directly: "Hai gia esplorato **[dimension]**. Vuoi approfondire quello che avevi fatto, o ricominciare da zero?"
+     - Wait for the user's response before proceeding.
+     - **If user chooses to deepen:**
+       - Read the existing `.brainstorm/dimensions/<dimension>.md` file into context.
+       - Note internally which sections have substantive content vs placeholders/thin content (sections with only guiding questions or "Not yet explored" markers are considered thin).
+       - Proceed to the Opening, but adapt: acknowledge previous exploration briefly ("Riprendiamo da dove eravamo rimasti") and reference something specific from the previous exploration.
+       - During conversation, naturally steer toward sections with placeholders or thin content through questions -- NEVER list missing sections, NEVER say "last time we didn't cover X", NEVER reveal which sections are thin. Same invisible tracking principle as the standard flow.
+       - At closure: write an updated dimension file that incorporates BOTH the previous content (preserved for untouched sections) and new conversation content (for discussed sections). The updated file REPLACES the previous one (single source of truth). A new session log is created with a new timestamp.
+     - **If user chooses to restart:**
+       - Archive the existing dimension file before starting fresh:
+         ```bash
+         mkdir -p .brainstorm/dimensions/archive
+         TIMESTAMP=$(date +%Y-%m-%d-%H%M)
+         mv .brainstorm/dimensions/<dimension>.md .brainstorm/dimensions/archive/<dimension>-$TIMESTAMP.md
+         ```
+       - Proceed with standard fresh exploration (no change to rest of flow).
+       - A new dimension file and session log are created from scratch.
+   - If dimension file does NOT exist: proceed with standard fresh exploration (no change).
 
 ---
 
@@ -55,6 +82,7 @@ Start the conversation with a brief, focused opening. NOT a monologue.
    - business: socratic
    - competitors: challenger
    - users: socratic
+   - Custom dimensions (`IS_CUSTOM = true`): default to socratic (most versatile for open-ended exploration).
 
    Frame it casually: "Per [dimension] partiamo in modalita [mode] -- ci stai?" One line, not a formal menu. If the user disagrees, switch immediately.
 
@@ -185,11 +213,22 @@ Update the session tracker (see SESSION.md Update section below).
 
 ### Step 5: Suggest Next Dimension
 
-After saving all artifacts, read the dimensions guide via Read tool on `$BRAIN_REF/dimensions-guide.md`. Based on what emerged in THIS conversation, suggest which dimension to explore next. The suggestion must reference conversation content:
-- GOOD: "Hai menzionato dei competitor diretti -- potrebbe valere la pena esplorare quella dimensione."
-- BAD: "Ti suggerisco di esplorare la dimensione market." (generic)
+After saving all artifacts, build a systematic next-dimension suggestion:
 
-Mention they can use `/brain:explore [dimension]` or the shortcut `/brain:[dimension]`.
+1. **Load context:** Read the dimensions guide via Read tool on `$BRAIN_REF/dimensions-guide.md`. Read `.brainstorm/SESSION.md` to check which dimensions are explored vs not started (include custom dimensions).
+
+2. **Check if all dimensions are explored:** If every dimension in SESSION.md (built-in + custom) has status "explored", congratulate the user: "Hai esplorato tutte le dimensioni! Quando sei pronto, puoi lanciare `/brain:synthesize` per mettere tutto insieme." and STOP (do not suggest a next dimension).
+
+3. **Prioritize the suggestion** based on these signals (in order of strength):
+   - **Conversation signals (strongest):** Dimensions mentioned or hinted at during the just-completed conversation. If the user talked about pricing, suggest business. If they mentioned a competitor by name, suggest competitors. If they described user behaviors, suggest users.
+   - **Dimension relationships:** Use dimensions-guide.md to identify natural follow-ups. For example, after product suggest users; after users suggest competitors; after competitors suggest market.
+   - **Gap filling (weakest):** Any unexplored dimension (built-in or custom) that has not yet been explored.
+
+4. **Format the suggestion** with a reference to conversation content:
+   - GOOD: "Ti suggerisco **users** perche durante product hai menzionato 'solo developer' come target -- vale la pena capire meglio chi e questa persona."
+   - BAD: "Ti suggerisco di esplorare la dimensione market." (generic, no conversation reference)
+
+5. Mention they can use `/brain:explore [dimension]` or the shortcut `/brain:[dimension]` (shortcuts available only for the 6 built-in dimensions).
 
 ---
 
