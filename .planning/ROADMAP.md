@@ -62,12 +62,11 @@ Plans:
   3. Each dimension exploration also produces a cleaned session log in `.brainstorm/sessions/<dimension>-<date>.md` with conversational noise removed
   4. User can choose exploration mode per dimension (Socratic, devil's advocate, creative/divergent)
   5. Explorer challenges assumptions constructively and suggests when key points are covered, but user decides to continue or stop
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
-- [ ] 03-03: TBD
+- [ ] 03-01-PLAN.md -- Complete /brain:explore command with interactive dimension exploration
+- [ ] 03-02-PLAN.md -- 6 shortcut commands delegating to explore behavior
 
 ### Phase 4: Session Management
 **Goal**: User can resume previous sessions, track progress, revisit dimensions, add custom dimensions, and receive guidance on what to explore next
@@ -124,7 +123,7 @@ Note: Phases 5 and 6 both depend on Phase 3 (not on each other).
 |-------|----------------|--------|-----------|
 | 1. Infrastructure & Foundations | 2/2 | Complete | 2026-03-04 |
 | 2. New Session Flow | 1/2 | In progress | - |
-| 3. Dimension Exploration | 0/3 | Not started | - |
+| 3. Dimension Exploration | 0/2 | Not started | - |
 | 4. Session Management | 0/2 | Not started | - |
 | 5. Research Integration | 0/1 | Not started | - |
 | 6. Synthesis & Handoff | 0/2 | Not started | - |
