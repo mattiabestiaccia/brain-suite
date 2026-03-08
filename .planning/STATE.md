@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-last_updated: "2026-03-07T18:08:24.775Z"
+last_updated: "2026-03-08T15:03:17.148Z"
 progress:
-  total_phases: 4
+  total_phases: 5
   completed_phases: 4
-  total_plans: 9
-  completed_plans: 9
+  total_plans: 11
+  completed_plans: 10
 ---
 
 # Project State
@@ -18,23 +18,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-04)
 
 **Core value:** L'utente puo esplorare un'idea di prodotto in modo strutturato e interattivo, dimensione per dimensione, con artefatti persistenti e output azionabile per l'implementazione.
-**Current focus:** Phase 4 - Session Management (Complete)
+**Current focus:** Phase 5 - Research Integration (In Progress)
 
 ## Current Position
 
-Phase: 4 of 6 (Session Management)
-Plan: 3 of 3 completed in current phase (3 complete)
-Status: Phase Complete
-Last activity: 2026-03-07 -- Completed 04-03-PLAN.md (resume intelligent hub)
+Phase: 5 of 6 (Research Integration)
+Plan: 1 of 2 completed in current phase (1 complete)
+Status: In Progress
+Last activity: 2026-03-08 -- Completed 05-01-PLAN.md (brain-researcher agent spec)
 
-Progress: [██████████] 100% (Phase 4)
+Progress: [█████-----] 50% (Phase 5)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
-- Average duration: 4.9min
-- Total execution time: 0.73 hours
+- Total plans completed: 10
+- Average duration: 4.5min
+- Total execution time: 0.75 hours
 
 **By Phase:**
 
@@ -44,10 +44,11 @@ Progress: [██████████] 100% (Phase 4)
 | 02-new-session-flow | 2 | 14min | 7min |
 | 03-dimension-exploration | 2/2 | 8min | 4min |
 | 04-session-management | 3/3 | 14min | 4.7min |
+| 05-research-integration | 1/2 | 1min | 1min |
 
 **Recent Trend:**
-- Last 5 plans: 5min, 3min, 5min, 4min, 5min
-- Trend: stable
+- Last 5 plans: 3min, 5min, 4min, 5min, 1min
+- Trend: stable (fast plan)
 
 *Updated after each plan completion*
 | Phase 01 P02 | 3min | 3 tasks | 3 files |
@@ -58,6 +59,7 @@ Progress: [██████████] 100% (Phase 4)
 | Phase 04 P01 | 5min | 2 tasks | 2 files |
 | Phase 04 P02 | 4min | 1 task | 1 file |
 | Phase 04 P03 | 5min | 2 tasks | 1 files |
+| Phase 05 P01 | 1min | 1 task | 1 file |
 
 ## Accumulated Context
 
@@ -97,6 +99,9 @@ Recent decisions affecting current work:
 - 04-03: Resume uses narrative prose (not tabular) to differentiate from /brain:status dashboard
 - 04-03: Intelligent hub handles status, review, explore internally -- only /brain:add-dimension redirects
 - 04-03: Explore delegation reuses exact same Read-tool pattern as shortcut commands
+- 05-01: Researcher uses 5-type query formulation table mapping claim types to Exa tool strategies
+- 05-01: Result file uses 4-status model (found_data, no_relevant_data, partial_data, error) for explorer consumption
+- 05-01: Agent writes only to .brainstorm/.research-pending/ with timestamp-based filenames
 
 ### Pending Todos
 
@@ -111,6 +116,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-07
-Stopped at: Completed 04-03-PLAN.md -- Phase 4 complete (all 3 plans done)
-Resume file: .planning/phases/04-session-management/04-03-SUMMARY.md
+Last session: 2026-03-08
+Stopped at: Completed 05-01-PLAN.md (brain-researcher agent spec)
+Resume file: .planning/phases/05-research-integration/05-01-SUMMARY.md

@@ -41,7 +41,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [ ] **RES-01**: Explorer identifies when real data would help and suggests spawning brain-researcher
 - [ ] **RES-02**: User confirms before researcher is spawned (explorer suggests, user approves)
-- [ ] **RES-03**: brain-researcher fetches factual data via Exa MCP (market data, competitor info, tech feasibility)
+- [x] **RES-03**: brain-researcher fetches factual data via Exa MCP (market data, competitor info, tech feasibility)
 - [ ] **RES-04**: Researcher results are integrated into the dimension exploration context
 
 ### Synthesis & Handoff
@@ -55,7 +55,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Agents
 
 - [x] **AGT-01**: brain-explorer agent guides interactive Socratic exploration with voice-first patterns and assumption challenging
-- [ ] **AGT-02**: brain-researcher agent fetches factual data via web search (Exa MCP) when spawned by explorer
+- [x] **AGT-02**: brain-researcher agent fetches factual data via web search (Exa MCP) when spawned by explorer
 - [ ] **AGT-03**: brain-synthesizer agent reads explored dimensions, identifies cross-dimensional patterns, generates SYNTHESIS.md and HANDOFF.md
 
 ### Infrastructure
@@ -132,7 +132,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SESS-03 | Phase 4: Session Management | Complete |
 | RES-01 | Phase 5: Research Integration | Pending |
 | RES-02 | Phase 5: Research Integration | Pending |
-| RES-03 | Phase 5: Research Integration | Pending |
+| RES-03 | Phase 5: Research Integration | Complete |
 | RES-04 | Phase 5: Research Integration | Pending |
 | SYNTH-01 | Phase 6: Synthesis & Handoff | Pending |
 | SYNTH-02 | Phase 6: Synthesis & Handoff | Pending |
@@ -140,7 +140,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SYNTH-04 | Phase 6: Synthesis & Handoff | Pending |
 | SYNTH-05 | Phase 6: Synthesis & Handoff | Pending |
 | AGT-01 | Phase 2: New Session Flow | Complete |
-| AGT-02 | Phase 5: Research Integration | Pending |
+| AGT-02 | Phase 5: Research Integration | Complete |
 | AGT-03 | Phase 6: Synthesis & Handoff | Pending |
 | INFRA-01 | Phase 1: Infrastructure & Foundations | Complete |
 | INFRA-02 | Phase 1: Infrastructure & Foundations | Complete |
