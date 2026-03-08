@@ -94,10 +94,11 @@ Plans:
   2. User explicitly confirms before the researcher is spawned (no automatic spawning)
   3. brain-researcher fetches factual data via Exa MCP and returns structured results
   4. Researcher results are integrated back into the ongoing dimension exploration context
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: TBD
+- [ ] 05-01-PLAN.md — Brain-researcher agent spec (Exa MCP queries, structured output, error handling)
+- [ ] 05-02-PLAN.md — Research integration in explore.md and brain-explorer.md (detection, permission, spawning, polling, re-integration)
 
 ### Phase 6: Synthesis & Handoff
 **Goal**: User can generate cross-dimensional insights and a structured document ready for implementation planning
@@ -126,5 +127,5 @@ Note: Phases 5 and 6 both depend on Phase 3 (not on each other).
 | 2. New Session Flow | 2/2 | Complete | 2026-03-05 |
 | 3. Dimension Exploration | 2/2 | Complete | 2026-03-07 |
 | 4. Session Management | 3/3 | Complete | 2026-03-07 |
-| 5. Research Integration | 0/1 | Not started | - |
+| 5. Research Integration | 0/2 | Not started | - |
 | 6. Synthesis & Handoff | 0/2 | Not started | - |
