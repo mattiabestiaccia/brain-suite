@@ -39,10 +39,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Research
 
-- [ ] **RES-01**: Explorer identifies when real data would help and suggests spawning brain-researcher
-- [ ] **RES-02**: User confirms before researcher is spawned (explorer suggests, user approves)
+- [x] **RES-01**: Explorer identifies when real data would help and suggests spawning brain-researcher
+- [x] **RES-02**: User confirms before researcher is spawned (explorer suggests, user approves)
 - [x] **RES-03**: brain-researcher fetches factual data via Exa MCP (market data, competitor info, tech feasibility)
-- [ ] **RES-04**: Researcher results are integrated into the dimension exploration context
+- [x] **RES-04**: Researcher results are integrated into the dimension exploration context
 
 ### Synthesis & Handoff
 
@@ -130,10 +130,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SESS-01 | Phase 2: New Session Flow | Complete |
 | SESS-02 | Phase 4: Session Management | Complete |
 | SESS-03 | Phase 4: Session Management | Complete |
-| RES-01 | Phase 5: Research Integration | Pending |
-| RES-02 | Phase 5: Research Integration | Pending |
+| RES-01 | Phase 5: Research Integration | Complete |
+| RES-02 | Phase 5: Research Integration | Complete |
 | RES-03 | Phase 5: Research Integration | Complete |
-| RES-04 | Phase 5: Research Integration | Pending |
+| RES-04 | Phase 5: Research Integration | Complete |
 | SYNTH-01 | Phase 6: Synthesis & Handoff | Pending |
 | SYNTH-02 | Phase 6: Synthesis & Handoff | Pending |
 | SYNTH-03 | Phase 6: Synthesis & Handoff | Pending |

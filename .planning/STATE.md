@@ -3,12 +3,12 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: in_progress
-last_updated: "2026-03-08T15:03:17.148Z"
+last_updated: "2026-03-08T15:07:15.000Z"
 progress:
   total_phases: 5
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 11
-  completed_plans: 10
+  completed_plans: 11
 ---
 
 # Project State
@@ -18,23 +18,23 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-04)
 
 **Core value:** L'utente puo esplorare un'idea di prodotto in modo strutturato e interattivo, dimensione per dimensione, con artefatti persistenti e output azionabile per l'implementazione.
-**Current focus:** Phase 5 - Research Integration (In Progress)
+**Current focus:** Phase 5 - Research Integration (Complete)
 
 ## Current Position
 
 Phase: 5 of 6 (Research Integration)
-Plan: 1 of 2 completed in current phase (1 complete)
-Status: In Progress
-Last activity: 2026-03-08 -- Completed 05-01-PLAN.md (brain-researcher agent spec)
+Plan: 2 of 2 completed in current phase (2 complete)
+Status: Complete
+Last activity: 2026-03-08 -- Completed 05-02-PLAN.md (research integration in explorer)
 
-Progress: [█████-----] 50% (Phase 5)
+Progress: [██████████] 100% (Phase 5)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
-- Average duration: 4.5min
-- Total execution time: 0.75 hours
+- Total plans completed: 11
+- Average duration: 4.3min
+- Total execution time: 0.78 hours
 
 **By Phase:**
 
@@ -44,11 +44,11 @@ Progress: [█████-----] 50% (Phase 5)
 | 02-new-session-flow | 2 | 14min | 7min |
 | 03-dimension-exploration | 2/2 | 8min | 4min |
 | 04-session-management | 3/3 | 14min | 4.7min |
-| 05-research-integration | 1/2 | 1min | 1min |
+| 05-research-integration | 2/2 | 4min | 2min |
 
 **Recent Trend:**
-- Last 5 plans: 3min, 5min, 4min, 5min, 1min
-- Trend: stable (fast plan)
+- Last 5 plans: 5min, 4min, 5min, 1min, 3min
+- Trend: stable (fast plans)
 
 *Updated after each plan completion*
 | Phase 01 P02 | 3min | 3 tasks | 3 files |
@@ -60,6 +60,7 @@ Progress: [█████-----] 50% (Phase 5)
 | Phase 04 P02 | 4min | 1 task | 1 file |
 | Phase 04 P03 | 5min | 2 tasks | 1 files |
 | Phase 05 P01 | 1min | 1 task | 1 file |
+| Phase 05 P02 | 3min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -102,6 +103,10 @@ Recent decisions affecting current work:
 - 05-01: Researcher uses 5-type query formulation table mapping claim types to Exa tool strategies
 - 05-01: Result file uses 4-status model (found_data, no_relevant_data, partial_data, error) for explorer consumption
 - 05-01: Agent writes only to .brainstorm/.research-pending/ with timestamp-based filenames
+- 05-02: Research state uses 5 invisible variables (mirrors invisible template tracking pattern)
+- 05-02: Permission-once pattern: first trigger asks user, subsequent triggers autonomous (max 3)
+- 05-02: Result re-integration is casual 1-2 sentences, never a data dump
+- 05-02: Task tool anti-pattern refined: conversation delegation banned, background research permitted
 
 ### Pending Todos
 
@@ -117,5 +122,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-03-08
-Stopped at: Completed 05-01-PLAN.md (brain-researcher agent spec)
-Resume file: .planning/phases/05-research-integration/05-01-SUMMARY.md
+Stopped at: Completed 05-02-PLAN.md (research integration in explorer)
+Resume file: .planning/phases/05-research-integration/05-02-SUMMARY.md
