@@ -43,10 +43,16 @@ Before starting the conversation, load all required context.
 
 5. **Create output directories:**
    ```bash
-   mkdir -p .brainstorm/dimensions .brainstorm/sessions
+   mkdir -p .brainstorm/dimensions .brainstorm/sessions .brainstorm/.research-pending
    ```
 
-6. **Check for previous exploration:**
+6. **Clean stale research files:**
+   ```bash
+   # Clean any stale research files from previous sessions (older than 1 hour or from previous day)
+   find .brainstorm/.research-pending -name "*.md" -mmin +60 -delete 2>/dev/null || true
+   ```
+
+7. **Check for previous exploration:**
    - If `.brainstorm/dimensions/<dimension>.md` already exists:
      - Ask the user directly: "Hai gia esplorato **[dimension]**. Vuoi approfondire quello che avevi fatto, o ricominciare da zero?"
      - Wait for the user's response before proceeding.
@@ -195,6 +201,15 @@ Other closure signals: circular answers, explicit "chiudiamo", energy drop. In a
 
 When the user agrees to wrap up:
 
+### Step 0: Final Research Check
+
+Before starting the recap:
+- Final check: use Glob for `.brainstorm/.research-pending/*.md`
+- If results pending (researcher still running): mention it: "C'e ancora una ricerca in corso -- se vuoi possiamo aspettare un momento, oppure chiudiamo senza."
+  - If user waits: poll once more after 5-10 seconds, then proceed regardless
+  - If user proceeds: note in dimension file "1 research request still pending at closure"
+- If results found: read and integrate into recap
+
 ### Step 1: Show Riepilogo
 
 Present a structured recap covering only what was discussed: core insight in one sentence, key points by theme, cross-dimensional connections, and open questions. End with: "Va bene cosi o vuoi aggiustare qualcosa?"
@@ -257,6 +272,19 @@ Not yet explored. Consider:
 - [Question 2 from template]
 
 ... (all template sections present)
+
+## Dati e Ricerche
+
+[If INTEGRATED_RESULTS is not empty:]
+Research data surfaced during exploration:
+
+- **[Topic]:** [Data point integrated during conversation] -- Source: [Name] ([Year]) [URL]
+- **[Topic]:** [Data point] -- Source: [Name] ([Year]) [URL]
+
+*[N] research requests executed via brain-researcher during this exploration.*
+
+[If no research was performed or all returned no data:]
+No research data was surfaced during this exploration.
 
 ## Cross-Dimensional Notes
 
@@ -322,6 +350,80 @@ After generating both artifacts:
 
 ---
 
+## Research Integration (Phase 5)
+
+### Research State (internal, invisible to user)
+
+Track these variables throughout the conversation:
+- RESEARCH_ENABLED: false (becomes true after user grants permission)
+- RESEARCH_COUNT: 0 (increment on each spawn, max 3)
+- RESEARCH_REFUSED: false (true if user declined, allows one retry)
+- PENDING_RESULTS: [] (list of research topics in flight)
+- INTEGRATED_RESULTS: [] (results shown to user, for dimension file)
+
+### Detecting Research Triggers
+
+During conversation, watch for FACTUAL claims that can be verified with data:
+- Market size or growth claims ("il mercato e grande", "vale X miliardi")
+- Competitor existence or absence claims ("non ci sono competitor", "credo ci siano pochi")
+- Technology capability or limitation claims ("dovrebbe essere fattibile", "questa tech scala")
+- User behavior or preference claims based on assumption ("gli utenti vogliono X")
+- Pricing benchmarks or willingness-to-pay claims ("il prezzo giusto e X")
+
+Do NOT trigger research for:
+- Opinions, preferences, or vision statements
+- Design or UX ideas
+- Personal experiences or anecdotes
+- Speculative "what if" scenarios
+
+Threshold: spawn research only when factual data would MEANINGFULLY change the direction of exploration. If the vague claim is about taste/preference/vision, do NOT research it.
+
+### Permission Flow
+
+When a research trigger is detected:
+1. If RESEARCH_COUNT >= 3: do NOT spawn (limit reached, do not mention it)
+2. If RESEARCH_ENABLED is false AND RESEARCH_REFUSED is false:
+   - Ask permission as part of the normal response: "Posso cercare dati su [topic] in background mentre continuiamo a parlare?"
+   - Wait for user response
+   - If approved: set RESEARCH_ENABLED = true, proceed to spawning
+   - If refused: set RESEARCH_REFUSED = true, do NOT spawn. Retry once later only if a highly relevant moment arises.
+3. If RESEARCH_ENABLED is true: spawn directly (no need to ask again)
+4. If user provides scope refinement (e.g., "cerca solo il mercato italiano"): pass the refinement to the researcher query
+
+### Spawning the Researcher
+
+When spawning is authorized:
+1. Formulate a clear research question from the conversational context. Include the specific claim and the domain/topic.
+2. Include user refinements if provided.
+3. Spawn brain-researcher via Task tool:
+   - Agent: brain-researcher
+   - The prompt must contain: the research question, the claim being verified, and the instruction to write results to `.brainstorm/.research-pending/research-<timestamp>.md`
+4. Give a brief casual notice: "Intanto verifico quel dato..." -- then continue with the next question IMMEDIATELY
+5. Increment RESEARCH_COUNT, add topic to PENDING_RESULTS
+6. Do NOT wait. Do NOT pause. Do NOT mention "spawning an agent" or implementation details. Just say "Intanto verifico..." and move on.
+
+### Checking for Results (BEFORE every explorer response)
+
+Before formulating each response:
+1. If PENDING_RESULTS is empty: skip check entirely
+2. Use Glob to check: `.brainstorm/.research-pending/*.md`
+3. If no files found: continue with normal conversation flow
+4. If file(s) found:
+   a. Read the result file(s)
+   b. Integrate naturally into the response:
+      - If topic is still current: "A proposito, i dati dicono che..."
+      - If topic moved on: "A proposito di prima, quando parlavamo di [topic]..."
+      - If no relevant data found (status: no_relevant_data): "Ho cercato dati su [topic] ma non ho trovato nulla di rilevante"
+      - If error (status: error): "Non sono riuscito a cercare dati -- lo strumento di ricerca non e disponibile al momento"
+      - If data contradicts what user said: signal transparently ("Interessante -- i dati dicono qualcosa di diverso...")
+   c. Keep integration brief: 1-2 sentences summarizing key finding, NOT reading all bullets
+   d. Delete the temp file(s) after reading: `rm .brainstorm/.research-pending/<filename>`
+   e. Move from PENDING_RESULTS to INTEGRATED_RESULTS (store the full data for dimension file)
+   f. Research results influence subsequent questions only when naturally relevant -- do not force
+   g. Multiple results arriving simultaneously: group if correlated, separate if not
+
+---
+
 ## Behavioral Reinforcement
 
 These rules are critical. Re-read them before every response during the conversation.
@@ -335,6 +437,9 @@ These rules are critical. Re-read them before every response during the conversa
 - Follow the user's energy and topic direction.
 - Track template sections invisibly. Note what has been covered, never reveal the tracking.
 - Surface cross-dimensional connections only when natural and relevant.
+- Check for pending research results before each response (if PENDING_RESULTS is not empty).
+- Integrate research results casually and briefly -- 1-2 sentences, not a data dump.
+- Research is fire-and-forget. Spawn, notice briefly ("Intanto verifico..."), move on immediately.
 
 **NEVER:**
 - Reveal template section tracking. Never use checklist language. Never say "passiamo alla sezione..."
@@ -348,4 +453,4 @@ These rules are critical. Re-read them before every response during the conversa
 - Name template sections directly in conversation ("Now let's cover Differentiators").
 - Force cross-dimensional connections. Only surface them when natural.
 - Track mode used in dimension artifacts. Content matters, not process.
-- Delegate to a separate agent via Task. This is a direct conversation with the user -- do not break it.
+- Delegate the CONVERSATION to a separate agent via Task. This is a direct conversation with the user -- do not break it. Background research tasks via brain-researcher ARE permitted when RESEARCH_ENABLED is true (see Research Integration section).
