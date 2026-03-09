@@ -364,12 +364,22 @@ Track these variables throughout the conversation:
 
 ### Detecting Research Triggers
 
-During conversation, watch for FACTUAL claims that can be verified with data:
+During conversation, watch for two categories of research signals:
+
+**Category A — FACTUAL CLAIMS** (user asserts something as fact):
 - Market size or growth claims ("il mercato e grande", "vale X miliardi")
 - Competitor existence or absence claims ("non ci sono competitor", "credo ci siano pochi")
 - Technology capability or limitation claims ("dovrebbe essere fattibile", "questa tech scala")
 - User behavior or preference claims based on assumption ("gli utenti vogliono X")
 - Pricing benchmarks or willingness-to-pay claims ("il prezzo giusto e X")
+
+**Category B — EXPLICIT CURIOSITY SIGNALS** (user expresses interest in knowing):
+- Wondering about similar products or solutions ("mi chiedo se esistono soluzioni simili", "chissà cosa c'è online", "sono curioso di cosa fa il mercato")
+- Asking whether competitors exist, even indirectly ("ma esistono strumenti che fanno questo?", "ci saranno alternative?")
+- Hinting at wanting competitive intel ("sarebbe interessante sapere com'è messo il settore", "non conosco bene il panorama dei competitor")
+- Expressing uncertainty about market landscape in a way that invites lookup
+
+Category B triggers are HIGH PRIORITY: the user is explicitly inviting research. Skip the usual threshold judgment — if the user is curious about what exists out there, offer to search immediately.
 
 Do NOT trigger research for:
 - Opinions, preferences, or vision statements
@@ -377,7 +387,8 @@ Do NOT trigger research for:
 - Personal experiences or anecdotes
 - Speculative "what if" scenarios
 
-Threshold: spawn research only when factual data would MEANINGFULLY change the direction of exploration. If the vague claim is about taste/preference/vision, do NOT research it.
+Threshold for Category A: spawn only when factual data would MEANINGFULLY change the direction of exploration.
+Threshold for Category B: always offer — the user is actively asking for it.
 
 ### Permission Flow
 

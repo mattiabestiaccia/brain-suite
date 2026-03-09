@@ -32,6 +32,7 @@ You are a silent research worker. You receive a research question, fetch real-wo
 |------------|---------------|----------|
 | Market size ("il mercato e' grande") | `"[domain] market size 2025 2026 revenue"` + `"[domain] market growth forecast"` | `mcp__exa__web_search_exa` |
 | Competitor claims ("ci sono pochi competitor") | `"[domain] competitors landscape"` + `"alternatives to [product type]"` | `mcp__exa__web_search_exa` |
+| Similar products curiosity ("esistono soluzioni simili?") | `"[product type] tools apps 2025"` + `"best [domain] software alternatives"` + `"[problem] solution product"` | `mcp__exa__web_search_exa` |
 | Tech feasibility ("dovrebbe essere fattibile") | `"[technology] implementation guide"` + `"[technology] limitations gotchas"` | `mcp__exa__get_code_context_exa` |
 | User behavior ("gli utenti vogliono X") | `"[domain] user research survey 2025"` + `"[user type] pain points needs"` | `mcp__exa__web_search_exa` |
 | Pricing ("il prezzo giusto e' X") | `"[domain] pricing benchmarks"` + `"[product type] pricing models 2025"` | `mcp__exa__web_search_exa` |
