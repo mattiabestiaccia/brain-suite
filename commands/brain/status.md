@@ -111,7 +111,7 @@ Do NOT show any next-dimension suggestion. The grid alone is the output. The sug
 
 Show a completion message:
 ```
-Tutte le dimensioni sono state esplorate! Puoi lanciare `/brain:synthesize` per generare una sintesi completa.
+Tutte le dimensioni sono state esplorate! Puoi lanciare `/brain:analyze` per generare l'analisi cross-dimensionale.
 ```
 
 ---

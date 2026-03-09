@@ -232,7 +232,7 @@ After saving all artifacts, build a systematic next-dimension suggestion:
 
 1. **Load context:** Read the dimensions guide via Read tool on `$BRAIN_REF/dimensions-guide.md`. Read `.brainstorm/SESSION.md` to check which dimensions are explored vs not started (include custom dimensions).
 
-2. **Check if all dimensions are explored:** If every dimension in SESSION.md (built-in + custom) has status "explored", congratulate the user: "Hai esplorato tutte le dimensioni! Quando sei pronto, puoi lanciare `/brain:synthesize` per mettere tutto insieme." and STOP (do not suggest a next dimension).
+2. **Check if all dimensions are explored:** If every dimension in SESSION.md (built-in + custom) has status "explored", congratulate the user: "Hai esplorato tutte le dimensioni! Quando sei pronto, puoi lanciare `/brain:analyze` per generare l'analisi cross-dimensionale." and STOP (do not suggest a next dimension).
 
 3. **Prioritize the suggestion** based on these signals (in order of strength):
    - **Conversation signals (strongest):** Dimensions mentioned or hinted at during the just-completed conversation. If the user talked about pricing, suggest business. If they mentioned a competitor by name, suggest competitors. If they described user behaviors, suggest users.

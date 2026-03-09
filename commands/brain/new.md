@@ -45,6 +45,7 @@ Before opening the conversation, check if a brainstorming session already exists
        [ -d .brainstorm/sessions ] && mv .brainstorm/sessions "$ARCHIVE_DIR/"
        [ -f .brainstorm/SYNTHESIS.md ] && mv .brainstorm/SYNTHESIS.md "$ARCHIVE_DIR/"
        [ -f .brainstorm/HANDOFF.md ] && mv .brainstorm/HANDOFF.md "$ARCHIVE_DIR/"
+       [ -f .brainstorm/ANALYSIS.md ] && mv .brainstorm/ANALYSIS.md "$ARCHIVE_DIR/"
        ```
      - Confirm archival to the user briefly, then proceed with the new session.
    - **If continue:**
