@@ -109,11 +109,11 @@ Plans:
   2. Synthesis output is saved as `.brainstorm/SYNTHESIS.md`
   3. User runs `/brain:handoff` and receives a GSD-ready document with structured sections: Product Vision, Problem & Opportunity, Target Users, Technical Constraints, Competitive Edge, Revenue Model
   4. HANDOFF.md is saved in `.brainstorm/` and is directly consumable by `/gsd:new-project`
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 06-01: TBD
-- [ ] 06-02: TBD
+- [ ] 06-01-PLAN.md — Brain-synthesizer agent spec (3 modes: analyze, synthesize, handoff)
+- [ ] 06-02-PLAN.md — Command files (analyze, synthesize, handoff) + fixes to new.md and status.md
 
 ## Progress
 
