@@ -131,7 +131,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 07-01-PLAN.md — Post-audit fixes: install bug, stale references, tech debt
+- [ ] 07-01-PLAN.md — Fix install.sh templates symlink, resume.md pipeline ref, new.md delegation pattern, explore.md frameworks loading
 
 ## Progress
 
