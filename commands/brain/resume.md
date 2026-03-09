@@ -111,7 +111,7 @@ Action:
    - ASCII progress bar: `Progresso: [======----] N/M dimensioni`
    - Dimension grid table with status markers, dates, and notes from SESSION.md
    - If 1+ explored and not all: next-dimension suggestion at bottom
-   - If all explored: completion message with /brain:synthesize suggestion
+   - If all explored: completion message with /brain:analyze suggestion
 2. Do NOT redirect to `/brain:status`. Handle it here.
 3. After displaying the status, re-propose the next dimension to explore: "Vuoi procedere con **[dimension]**?"
 
