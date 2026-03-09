@@ -127,6 +127,11 @@ done
 mkdir -p "$HOME/.claude/brain-suite"
 link_dir "$REPO_DIR/references" "$HOME/.claude/brain-suite/references" "brain-suite/references/"
 echo "$HOME/.claude/brain-suite/references" >> "$MANIFEST"
+
+# ── Symlink: templates/ directory ─────────────────────────
+link_dir "$REPO_DIR/templates" "$HOME/.claude/brain-suite/templates" "brain-suite/templates/"
+echo "$HOME/.claude/brain-suite/templates" >> "$MANIFEST"
+
 echo "$HOME/.claude/brain-suite" >> "$MANIFEST"
 
 # ── Summary ───────────────────────────────────────────────
