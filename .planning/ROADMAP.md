@@ -112,7 +112,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 06-01-PLAN.md — Brain-synthesizer agent spec (3 modes: analyze, synthesize, handoff)
+- [x] 06-01-PLAN.md — Brain-synthesizer agent spec (3 modes: analyze, synthesize, handoff)
 - [ ] 06-02-PLAN.md — Command files (analyze, synthesize, handoff) + fixes to new.md and status.md
 
 ## Progress
@@ -127,5 +127,5 @@ Note: Phases 5 and 6 both depend on Phase 3 (not on each other).
 | 2. New Session Flow | 2/2 | Complete | 2026-03-05 |
 | 3. Dimension Exploration | 2/2 | Complete | 2026-03-07 |
 | 4. Session Management | 3/3 | Complete | 2026-03-07 |
-| 5. Research Integration | 0/2 | Not started | - |
-| 6. Synthesis & Handoff | 0/2 | Not started | - |
+| 5. Research Integration | 2/2 | Complete | 2026-03-08 |
+| 6. Synthesis & Handoff | 1/2 | In Progress | - |
