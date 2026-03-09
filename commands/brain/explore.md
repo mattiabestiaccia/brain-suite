@@ -36,6 +36,7 @@ Before starting the conversation, load all required context.
      - If `IS_CUSTOM = false` (built-in): Read `$BRAIN_TPL/<dimension>.md`.
      - If `IS_CUSTOM = true` (custom): Read `.brainstorm/templates/<slug>.md`. If the custom template file is missing, tell the user: "Il template per [dimension] non esiste. Prova a rilanciare `/brain:add-dimension`." and STOP.
    - Read `$BRAIN_REF/questioning.md` -- for questioning mode behavior and per-dimension defaults.
+   - Read `$BRAIN_REF/frameworks.md` -- for structural frameworks (Lean Canvas, JTBD, Value Proposition Canvas) that inform exploration depth.
 
 4. **Load cross-dimensional context:**
    - Use Glob to find all existing dimension files: `.brainstorm/dimensions/*.md`
