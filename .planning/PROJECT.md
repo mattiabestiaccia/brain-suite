@@ -14,26 +14,28 @@ L'utente può esplorare un'idea di prodotto in modo strutturato e interattivo, d
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Comandi `/brain:*` registrati e funzionanti in Claude Code (13 comandi) — v1.0
+- ✓ 3 agenti specializzati (explorer, researcher, synthesizer) con ruoli distinti — v1.0
+- ✓ 5 workflow che orchestrano il flusso (new-session, explore-dimension, synthesize, resume-session, handoff) — v1.0
+- ✓ 10 template per artefatti strutturati (idea, session, 6 dimensioni, synthesis, handoff) — v1.0
+- ✓ 4 reference file (questioning, frameworks, dimensions-guide, voice-interaction) — v1.0
+- ✓ Storage per progetto in `.brainstorm/` con struttura definita — v1.0
+- ✓ Esplorazione interattiva voice-first: risposte brevi, una domanda alla volta, tolleranza parlato informale — v1.0
+- ✓ Session log puliti (rumore conversazionale rimosso, contenuto intatto) per ripresa contesto — v1.0
+- ✓ Re-explore di dimensioni già esplorate con scelta utente (approfondire o ripartire) — v1.0
+- ✓ Resume sessione con caricamento completo (IDEA + SESSION + tutte le dimensioni) — v1.0
+- ✓ Sintesi cross-dimensionale (richiede 2+ dimensioni esplorate) — v1.0
+- ✓ Handoff document strutturato per passaggio a GSD — v1.0
+- ✓ Explorer con gate ibrido: suggerisce quando i punti chiave sono coperti, utente decide — v1.0
+- ✓ Researcher spawned su suggerimento explorer + conferma utente per dati reali — v1.0
+- ✓ Install/uninstall script funzionanti (symlink in `~/.claude/`) — v1.0
+- ✓ README.md con istruzioni di installazione e uso — v1.0
 
 ### Active
 
-- [ ] Comandi `/brain:*` registrati e funzionanti in Claude Code (13 comandi)
-- [ ] 3 agenti specializzati (explorer, researcher, synthesizer) con ruoli distinti
-- [ ] 5 workflow che orchestrano il flusso (new-session, explore-dimension, synthesize, resume-session, handoff)
-- [ ] 10 template per artefatti strutturati (idea, session, 6 dimensioni, synthesis, handoff)
-- [ ] 4 reference file (questioning, frameworks, dimensions-guide, voice-interaction)
-- [ ] Storage per progetto in `.brainstorm/` con struttura definita
-- [ ] Esplorazione interattiva voice-first: risposte brevi, una domanda alla volta, tolleranza parlato informale
-- [ ] Session log puliti (rumore conversazionale rimosso, contenuto intatto) per ripresa contesto
-- [ ] Re-explore di dimensioni già esplorate con scelta utente (approfondire o ripartire)
-- [ ] Resume sessione con caricamento completo (IDEA + SESSION + tutte le dimensioni)
-- [ ] Sintesi cross-dimensionale (richiede 2+ dimensioni esplorate)
-- [ ] Handoff document strutturato per passaggio a GSD
-- [ ] Explorer con gate ibrido: suggerisce quando i punti chiave sono coperti, utente decide
-- [ ] Researcher spawned su suggerimento explorer + conferma utente per dati reali
-- [ ] Install/uninstall script funzionanti (symlink in `~/.claude/`)
-- [ ] README.md con istruzioni di installazione e uso
+(Nessun requisito attivo — in attesa di v1.5 o nuovo milestone)
+
+### Out of Scope
 
 ### Out of Scope
 
@@ -44,6 +46,17 @@ L'utente può esplorare un'idea di prodotto in modo strutturato e interattivo, d
 - Conversation intelligence — v3
 - Supporto Windows nativo — post-v1
 - Registrazione/importazione audio — v2
+
+## Context
+
+**Shipped v1.0** — Brain Suite MVP completo e funzionante (2026-03-09).
+
+Tech stack: Markdown-as-prompt + Claude Code slash commands + 3 specialized agents + Exa MCP.
+90 file nel repo, ~15,400 inserzioni in 5 giorni di sviluppo (2026-03-04 → 2026-03-09), 7 fasi, 14 piani.
+
+Il flusso E2E è stato verificato e tutti i gap critici dell'audit sono stati chiusi (templates/ symlink, pipeline references, frameworks.md runtime loading).
+
+Prossimo milestone: v1.5 Python processing toolkit — faster-whisper + pyannote per trascrizione, taglio, diarization, distillazione conversazionale.
 
 ## Context
 
@@ -83,14 +96,15 @@ L'utente può esplorare un'idea di prodotto in modo strutturato e interattivo, d
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Monorepo config + tools | Un solo clone per avere tutto, tools Python come sottoprogetto uv indipendente | — Pending |
-| Symlink per distribuzione | Zero copia, modifiche immediate, git-tracked | — Pending |
-| Reference file per voice-first | Pattern GSD: fonte di verità centralizzata, workflow la consumano | — Pending |
-| Session log = transcript pulito | Rimuovere rumore conversazionale, mantenere contenuto intatto per ripresa contesto | — Pending |
-| Explorer depth ibrido | Suggerisce quando coperto ma lascia controllo all'utente — non blocca il flusso | — Pending |
-| Researcher spawn = suggerimento + conferma | Explorer identifica bisogno dati reali, utente conferma prima dello spawn | — Pending |
-| v1 solo config, v1.5 Python | Consegnare valore subito senza dipendenze pesanti (faster-whisper, pyannote) | — Pending |
-| GSD bridge fuori scope v1 | HANDOFF.md prodotto, passaggio manuale — la modifica a GSD è separata | — Pending |
+| Monorepo config + tools | Un solo clone per avere tutto, tools Python come sottoprogetto uv indipendente | ✓ Good — struttura confermata funzionante |
+| Symlink per distribuzione | Zero copia, modifiche immediate, git-tracked | ✓ Good — install.sh + manifest funzionano, `git pull` propaga aggiornamenti |
+| Reference file per voice-first | Pattern GSD: fonte di verità centralizzata, workflow la consumano | ✓ Good — voice-interaction.md referenziato da tutti i comandi |
+| Session log = transcript pulito | Rimuovere rumore conversazionale, mantenere contenuto intatto per ripresa contesto | ✓ Good — pattern implementato in explore.md |
+| Explorer depth ibrido | Suggerisce quando coperto ma lascia controllo all'utente — non blocca il flusso | ✓ Good — implementato in explore.md con suggestion trigger |
+| Researcher spawn = suggerimento + conferma | Explorer identifica bisogno dati reali, utente conferma prima dello spawn | ✓ Good — permission flow esplicito prima dello spawn |
+| v1 solo config, v1.5 Python | Consegnare valore subito senza dipendenze pesanti (faster-whisper, pyannote) | ✓ Good — v1.0 shipped pulito, v1.5 rimane scope separato |
+| GSD bridge fuori scope v1 | HANDOFF.md prodotto, passaggio manuale — la modifica a GSD è separata | ✓ Good — handoff funziona, integrazione GSD differita correttamente |
+| templates/ symlink aggiunto post-audit | Audit ha trovato gap critico in install.sh (Phase 7) | ✓ Good — gap chiuso, install ora completo |
 
 ---
-*Last updated: 2026-03-04 after initialization*
+*Last updated: 2026-03-09 after v1.0 milestone*
