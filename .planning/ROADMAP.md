@@ -16,8 +16,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: New Session Flow** - `/brain:new` end-to-end with interactive Socratic questioning
 - [x] **Phase 3: Dimension Exploration** - `/brain:explore` across 6 dimensions with structured artifact output
 - [x] **Phase 4: Session Management** - Resume, status, re-exploration, custom dimensions
-- [ ] **Phase 5: Research Integration** - brain-researcher agent with Exa MCP for factual data
-- [ ] **Phase 6: Synthesis & Handoff** - Cross-dimensional synthesis and GSD-ready handoff document
+- [x] **Phase 5: Research Integration** - brain-researcher agent with Exa MCP for factual data
+- [x] **Phase 6: Synthesis & Handoff** - Cross-dimensional synthesis and GSD-ready handoff document
+- [ ] **Phase 7: Post-Audit Fixes** - Install bug fix, stale references, tech debt cleanup
 
 ## Phase Details
 
@@ -97,8 +98,8 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Brain-researcher agent spec (Exa MCP queries, structured output, error handling)
-- [ ] 05-02-PLAN.md — Research integration in explore.md and brain-explorer.md (detection, permission, spawning, polling, re-integration)
+- [x] 05-01-PLAN.md — Brain-researcher agent spec (Exa MCP queries, structured output, error handling)
+- [x] 05-02-PLAN.md — Research integration in explore.md and brain-explorer.md (detection, permission, spawning, polling, re-integration)
 
 ### Phase 6: Synthesis & Handoff
 **Goal**: User can generate cross-dimensional insights and a structured document ready for implementation planning
@@ -113,13 +114,30 @@ Plans:
 
 Plans:
 - [x] 06-01-PLAN.md — Brain-synthesizer agent spec (3 modes: analyze, synthesize, handoff)
-- [ ] 06-02-PLAN.md — Command files (analyze, synthesize, handoff) + fixes to new.md and status.md
+- [x] 06-02-PLAN.md — Command files (analyze, synthesize, handoff) + fixes to new.md and status.md
+
+### Phase 7: Post-Audit Fixes
+**Goal**: Close all gaps identified by v1.0 milestone audit — install bug, stale references, and tech debt cleanup
+**Depends on**: Phase 6 (gap closure phase)
+**Requirements**: INFRA-01, CORE-02
+**Gap Closure:** Closes gaps from v1.0-MILESTONE-AUDIT.md
+**Success Criteria** (what must be TRUE):
+  1. `install.sh` symlinks `templates/` directory — built-in dimension exploration works on fresh install
+  2. `uninstall.sh` removes `templates/` symlink
+  3. `resume.md` references `/brain:analyze` (not `/brain:synthesize`) as pipeline entry point
+  4. SUMMARY.md files include `requirements_completed` frontmatter field
+  5. `frameworks.md` is either loaded at runtime or removed from install
+  6. `new.md` uses standard Read-tool delegation pattern (not "Skill tool")
+**Plans**: 1 plan
+
+Plans:
+- [ ] 07-01-PLAN.md — Post-audit fixes: install bug, stale references, tech debt
 
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6
-Note: Phases 5 and 6 both depend on Phase 3 (not on each other).
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7
+Note: Phases 5 and 6 both depend on Phase 3 (not on each other). Phase 7 is gap closure.
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
@@ -128,4 +146,5 @@ Note: Phases 5 and 6 both depend on Phase 3 (not on each other).
 | 3. Dimension Exploration | 2/2 | Complete | 2026-03-07 |
 | 4. Session Management | 3/3 | Complete | 2026-03-07 |
 | 5. Research Integration | 2/2 | Complete | 2026-03-08 |
-| 6. Synthesis & Handoff | 1/2 | In Progress | - |
+| 6. Synthesis & Handoff | 2/2 | Complete | 2026-03-09 |
+| 7. Post-Audit Fixes | 0/1 | Pending | - |

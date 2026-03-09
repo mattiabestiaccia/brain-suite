@@ -10,7 +10,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Core Exploration
 
 - [x] **CORE-01**: User can start a brainstorming session with `/brain:new` that creates `.brainstorm/` with IDEA.md and SESSION.md through interactive Socratic questioning
-- [x] **CORE-02**: User can explore any dimension interactively via `/brain:explore <dimension>` with guided Socratic dialogue
+- [ ] **CORE-02**: User can explore any dimension interactively via `/brain:explore <dimension>` with guided Socratic dialogue
 - [x] **CORE-03**: User can explore dimensions in any order, skip dimensions, and revisit already-explored dimensions (non-linear)
 - [x] **CORE-04**: Explorer challenges user's assumptions constructively during exploration (assumption challenging mode)
 - [x] **CORE-05**: Explorer suggests when key points of a dimension are covered, but user decides to continue or stop (hybrid depth gating)
@@ -60,7 +60,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Infrastructure
 
-- [x] **INFRA-01**: `install.sh` creates symlinks from `~/.claude/` to repo files (commands, agents, brainstorm framework)
+- [ ] **INFRA-01**: `install.sh` creates symlinks from `~/.claude/` to repo files (commands, agents, brainstorm framework)
 - [x] **INFRA-02**: `uninstall.sh` removes symlinks without touching repo or other `~/.claude/` files
 - [x] **INFRA-03**: Install handles coexistence with GSD (symlink individual agent files, not agents directory)
 - [x] **INFRA-04**: Install is idempotent (running twice produces same result)
@@ -113,7 +113,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | CORE-01 | Phase 2: New Session Flow | Complete |
-| CORE-02 | Phase 3: Dimension Exploration | Complete |
+| CORE-02 | Phase 7: Post-Audit Fixes | Pending |
 | CORE-03 | Phase 3: Dimension Exploration | Complete |
 | CORE-04 | Phase 3: Dimension Exploration | Complete |
 | CORE-05 | Phase 3: Dimension Exploration | Complete |
@@ -142,7 +142,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | AGT-01 | Phase 2: New Session Flow | Complete |
 | AGT-02 | Phase 5: Research Integration | Complete |
 | AGT-03 | Phase 6: Synthesis & Handoff | Complete |
-| INFRA-01 | Phase 1: Infrastructure & Foundations | Complete |
+| INFRA-01 | Phase 7: Post-Audit Fixes | Pending |
 | INFRA-02 | Phase 1: Infrastructure & Foundations | Complete |
 | INFRA-03 | Phase 1: Infrastructure & Foundations | Complete |
 | INFRA-04 | Phase 1: Infrastructure & Foundations | Complete |
@@ -151,6 +151,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 **Coverage:**
 - v1 requirements: 35 total
 - Mapped to phases: 35
+- Complete: 33
+- Pending (gap closure): 2 (INFRA-01, CORE-02)
 - Unmapped: 0
 
 ---
